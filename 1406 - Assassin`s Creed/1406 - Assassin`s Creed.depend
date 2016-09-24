@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1433009311 source:f:\light oj\1406 - assassin`s creed\main.cpp
+	<iostream>
+	<algorithm>
+	<cstdio>
+	<vector>
+	<numeric>
+	<cmath>
+	<cstring>
+

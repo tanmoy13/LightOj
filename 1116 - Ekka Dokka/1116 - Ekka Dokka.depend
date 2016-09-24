@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1423803754 source:f:\light oj\1116 - ekka dokka\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<deque>
+	<stack>
+	<list>
+	<string>
+	<map>
+

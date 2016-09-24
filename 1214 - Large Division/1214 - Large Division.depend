@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1424437928 source:f:\light oj\1214 - large division\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<deque>
+	<stack>
+	<list>
+	<string>
+	<map>
+

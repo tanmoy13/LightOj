@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1424453410 source:f:\light oj\1225 - palindromic numbers (ii)\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<deque>
+	<stack>
+	<list>
+	<string>
+	<map>
+

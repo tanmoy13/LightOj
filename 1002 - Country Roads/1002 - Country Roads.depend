@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1415639862 source:g:\light oj\1002 - country roads\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<stack>
+	<list>
+	<string>
+	<map>
+
+1415639862 
+
+1415642188 source:/media/tanmoy/Study/Light Oj/1002 - Country Roads/main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<stack>
+	<list>
+	<string>
+	<map>
+

@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1417035646 source:g:\light oj\1231 - coin change (i)\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<stack>
+	<list>
+	<string>
+	<map>
+
+1419649411 source:f:\light oj\1231 - coin change (i)\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<stack>
+	<list>
+	<string>
+	<map>
+

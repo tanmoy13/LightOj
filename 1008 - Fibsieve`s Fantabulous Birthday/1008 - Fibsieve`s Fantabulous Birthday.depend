@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1422646692 source:f:\light oj\1008 - fibsieve`s fantabulous birthday\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<deque>
+	<stack>
+	<list>
+	<string>
+	<map>
+

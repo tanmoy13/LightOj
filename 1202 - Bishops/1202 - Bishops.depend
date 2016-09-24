@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1423857361 source:f:\light oj\1202 - bishops\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<deque>
+	<stack>
+	<list>
+	<string>
+	<map>
+

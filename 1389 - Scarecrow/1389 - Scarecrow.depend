@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1428234843 source:f:\light oj\1389 - scarecrow\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<deque>
+	<stack>
+	<list>
+	<string>
+	<map>
+

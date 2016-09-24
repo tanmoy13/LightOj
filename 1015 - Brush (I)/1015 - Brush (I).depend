@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1422655411 source:f:\light oj\1015 - brush (i)\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<deque>
+	<stack>
+	<list>
+	<string>
+	<map>
+

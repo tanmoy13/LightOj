@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1414957105 source:g:\light oj\1012 - guilty prince\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+	<cstring>
+	<algorithm>
+	<cstdlib>
+	<vector>
+	<sstream>
+	<set>
+	<queue>
+	<stack>
+	<list>
+	<string>
+	<map>
+

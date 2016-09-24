@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1423837425 source:f:\light oj\1136 - division by 3\main.cpp
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<iostream>
+
