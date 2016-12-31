@@ -32,7 +32,8 @@
 #define REP(i,a,b)       for(int i=a;i<b;i++)
 #define RREP(i,a,b)      for(int i=a;i>=b;i--)
 #define TEST_CASE(t)     for(int z=1;z<=t;z++)
-#define PRINT_CASE       printf("Case %d:\n",z)
+#define PRINT_CASE       printf("Case %d: ",z)
+#define LINE_PRINT_CASE  printf("Case %d:\n",z)
 #define CASE_PRINT       cout<<"Case "<<z<<": "
 #define all(a)           a.begin(),a.end()
 #define intlim           2147483648
@@ -59,110 +60,41 @@ using namespace std;
 //bool check(int N,int pos){return (bool)(N & (1<<pos));}
 /*------------------------------------------------*/
 
-#define mx 100005
+int fx[]= {-2,-3,-2,-1,-1,+1};
+int fy[]= {+1,-1,-1,-2,-3,-2};
 
-int n,q;
-vector<int>g[mx],cost[mx];
+int dp[2003][2003];
 
-int par[mx], dis[mx], level[mx];
-
-int sparse_par[mx][20],sparse_max[mx][20], sparse_min[mx][20];
-
-void dfs(int u, int cnt, int from)
+inline bool valid(int x,int y)
 {
-    par[u]=from;
-    level[u]=cnt;
-
-    for(int i=0;i<SZ(g[u]);i++)
-    {
-        int v=g[u][i];
-        if(v!=from)
-        {
-            dis[v]=cost[u][i];
-            dfs(v,cnt+1,u);
-        }
-    }
+    if(x<0 || y<0) return 0;
+    return 1;
 }
 
-void build_table()
+int func(int x, int y)
 {
-    ms(sparse_par,-1);
+    int &ret=dp[x][y];
+    if(ret!=-1) return ret;
 
-    sparse_par[1][0]=par[1];
-    sparse_min[1][0]=INT_MAX;
-    sparse_max[1][0]=0;
+    int cnt=0;
+    for(int i=0; i<6; i++)
+        cnt+=valid(x+fx[i],y+fy[i]);
+    if(cnt==0) return ret=0;
 
-    for(int i=2;i<=n;i++)
+    set<int>st;
+
+    for(int i=0; i<6; i++)
     {
-        sparse_par[i][0]=par[i];
-        sparse_min[i][0]=dis[i];
-        sparse_max[i][0]=dis[i];
+        if(valid(x+fx[i],y+fy[i]))
+            st.insert(func(x+fx[i],y+fy[i]));
     }
 
-    for(int j=1;1<<j<n;j++)
-    {
-        for(int i=1;i<=n;i++)
-        {
-            if(sparse_par[i][j-1]!=-1)
-            {
-//                D(i);
-//                D(j);
+    int p=0;
 
-                sparse_par[i][j]=sparse_par[sparse_par[i][j-1]][j-1];
-                sparse_max[i][j]=max(sparse_max[i][j-1],sparse_max[sparse_par[i][j-1]][j-1]);
-                sparse_min[i][j]=min(sparse_min[i][j-1],sparse_min[sparse_par[i][j-1]][j-1]);
-//                D(sparse_par[i][j]);
-//                D(sparse_max[i][j]);
-//                D(sparse_min[i][j]);
-            }
-        }
-    }
-
+    while(st.find(p)!=st.end()) p++;
+    return ret=p;
 }
 
-pii query(int p, int q)
-{
-    if(level[p]<level[q]) swap(p,q);
-
-    int log=log2(level[p]);
-
-    int maxi=0,mini=INT_MAX;
-
-    for(int i=log;i>=0;i--)
-    {
-        if(level[p]-(1<<i)>=level[q])
-        {
-            maxi=max(maxi,sparse_max[p][i]);
-            mini=min(mini,sparse_min[p][i]);
-
-            p=sparse_par[p][i];
-
-        }
-    }
-
-    if(p==q)
-    {
-        return pii(mini,maxi);
-    }
-
-    for(int i=log;i>=0;i--)
-    {
-        if(sparse_par[p][i]!=-1 && sparse_par[p][i]!=sparse_par[q][i])
-        {
-            maxi=max(maxi,max(sparse_max[p][i],sparse_max[q][i]));
-            mini=min(mini,min(sparse_min[p][i],sparse_min[q][i]));
-            p=sparse_par[p][i];
-            q=sparse_par[q][i];
-        }
-    }
-
-    maxi=max(maxi,max(dis[p],dis[q]));
-    mini=min(mini,min(dis[p],dis[q]));
-
-    return pii(mini,maxi);
-
-
-}
 
 int main()
 {
@@ -172,46 +104,36 @@ int main()
 
     int t;
     sf(t);
+
+    ms(dp,-1);
+
     TEST_CASE(t)
     {
+        int n;
         sf(n);
 
-        for(int i=1;i<n;i++)
-        {
-            int a,b,c;
-            sfff(a,b,c);
-            g[a].pb(b);
-            g[b].pb(a);
-            cost[a].pb(c);
-            cost[b].pb(c);
-        }
+        int ans=0;
 
-        dis[1]=0;
-        dfs(1,0,1);
-
-        build_table();
-
-        sf(q);
-
-        PRINT_CASE;
-
-        while(q--)
+        for(int i=0; i<n; i++)
         {
             int a,b;
             sff(a,b);
-            pii ans=query(a,b);
-            printf("%d %d\n",ans.ff,ans.ss);
-
+            ans^=func(a,b);
         }
 
-        for(int i=0;i<=n;i++)
+        PRINT_CASE;
+        if(ans)
         {
-            g[i].clear();
-            cost[i].clear();
+            pf("Alice\n");
         }
-
+        else
+            pf("Bob\n");
 
     }
 
     return 0;
 }
+
+
+
+
