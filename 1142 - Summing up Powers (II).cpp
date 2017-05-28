@@ -1,5 +1,5 @@
 /*
-Editorial : http://www.wonter.net/index.php/archives/858/
+Editorial : http://www.wonter.net/archives/lightoj-1142-summing-up-powers-ii.html
 */
 
 #include <bits/stdc++.h>
